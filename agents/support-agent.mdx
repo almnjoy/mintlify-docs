@@ -1,0 +1,43 @@
+---
+title: Support Agent
+description: Helps TrueNorth customers with system monitoring, troubleshooting, and warranty claims after installation.
+---
+
+# Support Agent
+
+The Support Agent runs in `#solar-support` and serves customers who already have a TrueNorth system installed. It handles the most common post-install questions and knows when to escalate to a human.
+
+## What It Does
+
+<AccordionGroup>
+  <Accordion title="System Monitoring Help">
+    Walks customers through reading their monitoring dashboard — understanding daily/weekly production, spotting anomalies, and interpreting inverter status codes.
+  </Accordion>
+  <Accordion title="Basic Troubleshooting">
+    Diagnoses common issues: inverter offline, reduced output, app connectivity problems, and breaker trips. Provides step-by-step resolution guidance before escalating.
+  </Accordion>
+  <Accordion title="Warranty Guidance">
+    Explains what's covered under the panel manufacturer warranty (25 years), TrueNorth workmanship warranty, and inverter warranties. Helps customers identify if an issue qualifies for a warranty claim.
+  </Accordion>
+  <Accordion title="Escalation">
+    When an issue requires on-site service, the agent collects system details and contact info and flags the record for the technical team.
+  </Accordion>
+</AccordionGroup>
+
+## Persona
+
+```yaml
+personality: solar-support
+system_prompt: >
+  You are a solar support specialist helping TrueNorth Solar customers
+  with system monitoring, troubleshooting, and warranty claims.
+```
+
+## Common Issues Handled
+
+| Issue | Agent Response |
+|-------|---------------|
+| Inverter offline | Check Wi-Fi, power cycle steps, error code lookup |
+| Low production | Check shading, soiling, inverter status, time-of-year context |
+| App not connecting | Re-pair walkthrough, account reset steps |
+| Panel damage | Photo documentation request, warranty claim initiation |

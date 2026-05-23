@@ -1,0 +1,55 @@
+---
+title: Agent Overview
+description: Three AI agents running in TrueNorth's Discord — each with a distinct role in the customer journey.
+---
+
+# AI Agent Overview
+
+TrueNorth Solar runs three specialized AI agents through Discord. Each agent has its own persona, channel, and knowledge scope. They hand off to each other and surface into the team dashboard as real CRM leads.
+
+## The Three Agents
+
+<CardGroup cols={3}>
+  <Card title="Sales Agent" icon="handshake" href="/agents/sales-agent" color="#F59E0B">
+    Qualifies inbound leads, explains financing, estimates ROI, and books site surveys.
+  </Card>
+  <Card title="Support Agent" icon="wrench" href="/agents/support-agent" color="#10B981">
+    Helps existing customers with system monitoring, troubleshooting, and warranty claims.
+  </Card>
+  <Card title="Doc Agent" icon="book" href="/agents/doc-agent" color="#6366F1">
+    Answers technical questions about solar, components, regulations, and install process.
+  </Card>
+</CardGroup>
+
+## How They Work Together
+
+```
+Customer joins Discord
+        │
+        ▼
+   #general-solar ──► Doc Agent (Solar 101, how it works)
+        │
+        ▼
+   #solar-sales ──────► Sales Agent (lead qualification, ROI, booking)
+        │
+        ▼
+   CRM Lead Created ──► Dashboard pipeline (team picks up)
+        │
+        ▼
+   Post-install
+        │
+        ▼
+   #solar-support ────► Support Agent (monitoring, troubleshooting, warranty)
+```
+
+## Channel Routing
+
+| Channel | Agent | Trigger |
+|---------|-------|---------|
+| `#solar-info` | Doc Agent | General solar questions, how-it-works |
+| `#solar-sales` | Sales Agent | Inbound interest, quote requests |
+| `#solar-support` | Support Agent | Customer help, post-install issues |
+
+## Powered by Hermes
+
+All three agents run on a shared [Hermes](https://hermes-agent.nousresearch.com) gateway with separate personality profiles. Each profile has a distinct system prompt, memory configuration, and tool access. The gateway is OpenAI-compatible and connects to OpenAI Codex for inference.

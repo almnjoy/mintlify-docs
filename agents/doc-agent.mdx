@@ -1,0 +1,42 @@
+---
+title: Doc Agent
+description: Answers technical solar questions — how it works, components, permits, and industry terminology.
+---
+
+# Doc Agent
+
+The Doc Agent runs in `#solar-info` and is the educational layer of the TrueNorth AI platform. It answers technical and general questions about solar energy — designed for homeowners who are still learning.
+
+## What It Does
+
+<AccordionGroup>
+  <Accordion title="Solar Education">
+    Explains how solar panels work, what components make up a system, how grid-tie and net metering function, and what realistic expectations for output look like in Canadian climates.
+  </Accordion>
+  <Accordion title="Component Questions">
+    Covers panels, inverters (string, micro, power optimizer), racking, monitoring systems, and battery storage. Helps customers understand trade-offs.
+  </Accordion>
+  <Accordion title="Permits and Incentives">
+    Explains the permitting process, utility interconnection requirements, and available federal and provincial solar incentives (CEIP, provincial grants, net metering programs by province).
+  </Accordion>
+  <Accordion title="Industry Terminology">
+    Defines kW vs kWh, payback period, degradation rate, PV, DC/AC ratio, and other terms customers encounter during the sales process.
+  </Accordion>
+</AccordionGroup>
+
+## Persona
+
+```yaml
+personality: solar-doc
+system_prompt: >
+  You are a solar documentation expert helping with permits, utility
+  interconnection paperwork, HOA approvals, and incentive documentation.
+```
+
+## Channel Flow
+
+The Doc Agent frequently redirects warm, interested prospects to `#solar-sales` to connect with the Sales Agent. This handoff is intentional — education first, sales second.
+
+<Tip>
+  The Doc Agent links directly to the [Solar 101](/solar/solar-101) and [Install Process](/solar/install-process) pages in these docs when customers want to read more.
+</Tip>

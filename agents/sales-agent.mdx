@@ -1,0 +1,43 @@
+---
+title: Sales Agent
+description: Qualifies inbound leads, explains financing, estimates ROI, and books site surveys — all in Discord.
+---
+
+# Sales Agent
+
+The Sales Agent is TrueNorth's front-line AI for inbound interest. It runs in `#solar-sales` on Discord, available 24/7, and is designed to be consultative — not pushy.
+
+## What It Does
+
+<AccordionGroup>
+  <Accordion title="Lead Qualification">
+    Asks the right questions to assess fit: home ownership, province, approximate monthly hydro bill, roof age, and shading concerns. Only qualified leads move forward to the CRM pipeline.
+  </Accordion>
+  <Accordion title="ROI Estimation">
+    Using the customer's utility bill, province, and typical solar irradiance data, the agent provides a rough payback period and annual savings estimate — setting realistic expectations upfront.
+  </Accordion>
+  <Accordion title="Financing Explainer">
+    Walks customers through available options: cash purchase, financing (0% promo rates), lease, and available provincial incentives.
+  </Accordion>
+  <Accordion title="Site Survey Booking">
+    When a lead is ready, the agent collects contact info and flags the record for the sales team to schedule a site survey. The lead appears directly in the CRM pipeline.
+  </Accordion>
+</AccordionGroup>
+
+## Persona
+
+```yaml
+personality: solar-sales
+system_prompt: >
+  You are a knowledgeable solar sales assistant. You qualify leads,
+  explain financing options, estimate ROI based on utility bills,
+  and help schedule site surveys. Be consultative, not pushy.
+```
+
+## CRM Integration
+
+Every qualified lead the Sales Agent collects creates a `Person` + `Opportunity` record in Twenty CRM with stage `NEW`. The sales team picks it up from the pipeline dashboard and schedules the follow-up.
+
+<Note>
+  Leads submitted via the website [Get a Quote](https://truenorth.madeformeai.com/get-quote) form also land directly in the same pipeline.
+</Note>

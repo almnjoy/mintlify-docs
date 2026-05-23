@@ -1,0 +1,52 @@
+---
+title: Dashboard
+description: Your TrueNorth team dashboard — live CRM data, pipeline overview, and AI infrastructure access.
+---
+
+# Dashboard
+
+The TrueNorth team dashboard is available at [truenorth.madeformeai.com](https://truenorth.madeformeai.com/login). It's protected by Authentik SSO — you'll be redirected to sign in with your team account.
+
+## What's on the Dashboard
+
+<CardGroup cols={2}>
+  <Card title="Pipeline" icon="kanban" href="/platform/pipeline">
+    Live Kanban board pulling from Twenty CRM. Drag leads between stages.
+  </Card>
+  <Card title="Team" icon="users">
+    View team members, leads assigned, and deals closed this week.
+  </Card>
+  <Card title="Resources" icon="book-open">
+    Quick links to Discord, docs, GitHub, and support.
+  </Card>
+  <Card title="Agent Brain" icon="brain-circuit">
+    Admin-only. Direct access to OpenClaw (AI gateway) and Hermes (agent runtime).
+  </Card>
+</CardGroup>
+
+## CRM Integration
+
+The dashboard connects live to **Twenty CRM** via GraphQL API. Any lead created through:
+- The website quote form
+- A Discord Sales Agent conversation
+
+...appears automatically in the pipeline as a `NEW` stage opportunity.
+
+## Access Levels
+
+| Role | Access |
+|------|--------|
+| **User** | Dashboard, Pipeline, Team, Resources, Account |
+| **Admin/Manager** | All of the above + Agent Brain (AI infrastructure) |
+
+## Signing In
+
+1. Go to [truenorth.madeformeai.com/login](https://truenorth.madeformeai.com/login)
+2. Click **Sign In**
+3. You'll be redirected to the TrueNorth Authentik login page
+4. Sign in with your team credentials
+5. You'll be redirected back to the dashboard
+
+<Note>
+  First-time access? Contact your account manager to get your credentials set up in Authentik.
+</Note>

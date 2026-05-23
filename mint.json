@@ -1,0 +1,60 @@
+{
+  "$schema": "https://mintlify.com/schema.json",
+  "name": "TrueNorth Solar",
+  "logo": {
+    "light": "/logo/logo.svg",
+    "dark": "/logo/logo.svg"
+  },
+  "favicon": "/logo/logo.svg",
+  "colors": {
+    "primary": "#F59E0B",
+    "light": "#FDE68A",
+    "dark": "#B45309",
+    "background": {
+      "light": "#FFFFFF",
+      "dark": "#111827"
+    }
+  },
+  "topbarLinks": [
+    {
+      "name": "Website",
+      "url": "https://truenorth.madeformeai.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Get a Free Quote",
+    "url": "https://truenorth.madeformeai.com/get-quote"
+  },
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": ["introduction"]
+    },
+    {
+      "group": "AI Agents",
+      "pages": [
+        "agents/overview",
+        "agents/sales-agent",
+        "agents/support-agent",
+        "agents/doc-agent"
+      ]
+    },
+    {
+      "group": "Solar Knowledge",
+      "pages": [
+        "solar/solar-101",
+        "solar/install-process"
+      ]
+    },
+    {
+      "group": "Platform",
+      "pages": [
+        "platform/dashboard",
+        "platform/pipeline"
+      ]
+    }
+  ],
+  "footerSocials": {
+    "github": "https://github.com/almnjoy"
+  }
+}

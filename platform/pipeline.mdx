@@ -1,0 +1,44 @@
+---
+title: Pipeline
+description: The TrueNorth lead pipeline — a live Kanban board connected to Twenty CRM.
+---
+
+# Pipeline
+
+The Pipeline page at [truenorth.madeformeai.com/pipeline](https://truenorth.madeformeai.com/pipeline) is a live Kanban board pulling directly from Twenty CRM. Every card is a real opportunity record — drag it to update the stage in the CRM instantly.
+
+## Pipeline Stages
+
+| Stage | Meaning |
+|-------|---------|
+| **New Lead** | Fresh inbound — came in via website form or Discord Sales Agent |
+| **Contacted** | First outreach made, awaiting response |
+| **Site Survey Booked** | Site inspection scheduled |
+| **Proposal Sent** | Custom system design and pricing delivered to customer |
+| **Won** | Contract signed, install scheduled |
+| **Lost** | Didn't move forward — still captured for follow-up campaigns |
+
+## Where Leads Come From
+
+<CardGroup cols={2}>
+  <Card title="Website Form" icon="globe">
+    The [Get a Quote](https://truenorth.madeformeai.com/get-quote) form creates a lead directly in Twenty CRM as a `Person` + `Opportunity` with stage `NEW`.
+  </Card>
+  <Card title="Discord Sales Agent" icon="robot">
+    When the Sales Agent qualifies a lead in `#solar-sales`, it creates the same CRM record automatically.
+  </Card>
+</CardGroup>
+
+## Using the Board
+
+- **Drag a card** to move it to the next stage — updates live in Twenty CRM
+- **Click a card** to see contact details, deal value, and close date
+- All changes sync back to Twenty — your team always has the same view
+
+## CRM: Twenty
+
+The underlying CRM is [Twenty](https://twenty.com) — an open-source Salesforce alternative. Advanced users can access it directly at the CRM URL for full record management, reporting, and workflow automation.
+
+<Warning>
+  Dragging a card to **Won** or **Lost** is final in the pipeline view. For corrections, go directly to the Twenty CRM record.
+</Warning>
